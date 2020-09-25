@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Document</title>
+    <script>
+        function onlogin() {
+            var uname = document.getElementById("name").value;
+            var pss = document.getElementById("pass").value;
+            if (uname == "farmer1" && pss == "farmer1") {
+                return true;
+            } else if (uname == "producer1" && pss == "producer1") {
+                return true;
+            } else {
+                alert("wrong password");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>Consortium blockchain application for agriculture and food supplychain</header>
+    <form action="http://localhost:8001/" onsubmit="return onlogin()">
+        <label>Farmer Login</label>
+        <input type="text" id="name" placeholder="Enter the user name" />
+        <br>
+        <input type="password" id="pass" placeholder="Enter the password" />
+        <br>
+        <input type="submit" value="Go">
+    </form>
+</body>
+
+</html>
